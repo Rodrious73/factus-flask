@@ -1,0 +1,35 @@
+{% extends 'factus/base.html' %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
+
+<br>
+<h3>Dashboard Factus</h1>
+
+    <table id="facturasTable" class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Número</th>
+                <th>Referencia</th>
+                <th>Cliente</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Fecha Creación</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    {% include 'factus/modal_cargar.html' %}
+
+    <script>
+       const urlGetFacturas = '{{ url_for("factura.get_facturas") }}';
+       const urlFacturaDownloadPdf = '{{ url_for("factura.download_pdf", number="") }}';
+       const urlFacturaDownloadXml = '{{ url_for("factura.download_xml", number="") }}';
+    </script>
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    {% endblock %}

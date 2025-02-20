@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container text-center mt-5">
+    <!-- Título principal -->
+    <h1 class="display-4 fw-bold"
+        style="color: #00ff99; text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99;">
+        Reto Factus - Halltec
+    </h1>
+    <!-- Información de la empresa -->
+    <div class="mt-5">
+        <h2 class="fw-bold" style="color: #ffffff; text-shadow: 0 0 5px #00ff99;">Reto Factus - Empresa HALLTEC</h2>
+        <p class="lead" style="color: #d1d1d1;">
+            Centro tecnológico y empresa de desarrollo tecnológico más grande del sur de Santander. Trabajamos por el
+            desarrollo digital de nuestra región.
+        </p>
+        <a href="https://halltec.co" target="_blank" class="btn btn-outline-success btn-lg mt-3"
+            style="border: 2px solid #00ff99; color: #00ff99; text-shadow: 0 0 5px #00ff99;">
+            Visitar página de Halltec
+        </a>
+    </div>
+    <!-- Redes sociales -->
+    <div class="mt-5">
+        <h3 class="fw-bold" style="color: #ffffff; text-shadow: 0 0 5px #00ff99;">Redes Sociales Halltec</h3>
+        <div class="d-flex justify-content-center gap-3 mt-3">
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@halltec.co" target="_blank" class="neon-link">
+                <i class="bi bi-tiktok" style="font-size: 2rem; color: #00ff99;"></i>
+            </a>
+            <!-- Facebook -->
+            <a href="https://web.facebook.com/halltec.co?_rdc=1&_rdr#" target="_blank" class="neon-link">
+                <i class="bi bi-facebook" style="font-size: 2rem; color: #00ff99;"></i>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/halltec/" target="_blank" class="neon-link">
+                <i class="bi bi-instagram" style="font-size: 2rem; color: #00ff99;"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Estilos adicionales -->
+<style>
+    /* Efecto neon en los enlaces */
+    .neon-link {
+        position: relative;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .neon-link:hover {
+        transform: scale(1.2);
+        text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99;
+    }
+
+    /* Botón con efecto neon */
+    .btn-outline-success {
+        border: 2px solid #00ff99;
+        color: #00ff99;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-success:hover {
+        background-color: #00ff99;
+        color: #ffffff;
+        box-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99;
+    }
+</style>
+{% endblock %}

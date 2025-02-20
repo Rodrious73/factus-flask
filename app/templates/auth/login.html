@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}Iniciar Sesion{% endblock %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <!-- Título principal -->
+    <h1 class="display-4 fw-bold"
+        style="color: #00ff99; text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99;">
+        Iniciar Sesión
+    </h1>
+
+    <!-- Formulario de inicio de sesión -->
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-6 col-md-8 col-sm-10">
+            <form action="" method="POST" class="neon-form">
+                <!-- Campo de correo electrónico -->
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control neon-input" id="correo" name="correo"
+                        placeholder="Correo Electrónico" required>
+                    <label for="email" class="neon-label">Correo Electrónico</label>
+                </div>
+
+                <!-- Campo de contraseña -->
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control neon-input" id="password" name="password"
+                        placeholder="Contraseña" required>
+                    <label for="password" class="neon-label">Contraseña</label>
+                </div>
+
+                <!-- Botón de inicio de sesión -->
+                <button type="submit" class="btn btn-outline-success btn-lg w-100 mt-4 neon-button">
+                    Iniciar Sesión
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Estilos adicionales -->
+<style>
+    /* Efecto neon en inputs */
+    .neon-input {
+        background-color: #1c1c1c;
+        border: 2px solid #00ff99;
+        color: #ffffff;
+        transition: all 0.3s ease;
+    }
+
+    .neon-input:focus {
+        box-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99;
+        border-color: #00ff99;
+        outline: none;
+    }
+
+    /* Efecto neon en labels */
+    .neon-label {
+        color: #00ff99;
+        transition: all 0.3s ease;
+    }
+
+    .neon-input:focus+.neon-label {
+        color: #ffffff;
+        text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 20px #00ff99;
+    }
+
+    /* Efecto neon en botón */
+    .neon-button {
+        border: 2px solid #00ff99;
+        color: #00ff99;
+        transition: all 0.3s ease;
+    }
+
+    .neon-button:hover {
+        background-color: #00ff99;
+        color: #ffffff;
+        box-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99;
+    }
+</style>
+
+{% endblock %}
