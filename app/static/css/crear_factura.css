@@ -14,6 +14,15 @@
         box-shadow: 0 0 20px #00ff99;
     }
 
+    .containerTabla {
+        max-width: 90%;
+        margin: 0 auto;
+        background: #1c1c1c;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px #00ff99;
+    }
+
     label {
         color: #00ff99;
     }
