@@ -28,6 +28,8 @@ document.getElementById("refreshTokenBtn").addEventListener("click", function(ev
 
         // Cerrar el modal después de 2 segundos
         setTimeout(() => modal.hide(), 2000);
+
+        location.reload();
     })
     .catch(error => {
         // Manejar error y mostrar mensaje
