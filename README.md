@@ -1,6 +1,6 @@
-# Reto Factus - Empresa Halltec  
+# Reto Factus API - Empresa Halltec  
 
-El **Reto Factus** organizado por la empresa **[Halltec de Colombia](https://halltec.co)** desafió a los participantes a conectar su API de Factus y emitir una factura desde cualquier lenguaje de programación.  
+El **Reto Factus API** organizado por la empresa **[Halltec de Colombia](https://halltec.co)** desafió a los participantes a conectar su API de Factus y emitir una factura desde cualquier lenguaje de programación.  
 
 En mi caso, logré completar el desafío utilizando **Python con Flask**, desarrollando una solución eficiente para interactuar con la API y generar facturas de manera automatizada.  
 
@@ -16,6 +16,10 @@ Este reto fue una excelente oportunidad para mejorar habilidades en integración
 Haz clic en la imagen para ver el video en YouTube:
 
 [![Ver el video en YouTube](https://img.youtube.com/vi/SaOCldiwD3E/maxresdefault.jpg)](https://www.youtube.com/watch?v=SaOCldiwD3E)
+
+## Documentación Oficial
+
+- Consulta la documentación oficial de **Factus API** [aquí](https://developers.factus.com.co)
 
 ## Creación del Entorno Virtual
 
