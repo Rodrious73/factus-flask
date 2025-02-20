@@ -15,7 +15,7 @@ Este reto fue una excelente oportunidad para mejorar habilidades en integración
 
 Haz clic en la imagen para ver el video en YouTube:
 
-[![Ver el video en YouTube](https://img.youtube.com/vi/SaOCldiwD3E/maxresdefault.jpg)](https://www.youtube.com/watch?v=SaOCldiwD3E)
+[![Ver el video en YouTube](https://img.youtube.com/vi/lNAVgHDsu2A/maxresdefault.jpg)](https://www.youtube.com/watch?v=lNAVgHDsu2A)
 
 ## Documentación Oficial
 
