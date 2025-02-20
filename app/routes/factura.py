@@ -159,3 +159,29 @@ def download_xml(number):
             "status_code": response.status_code,
             "response": response.text
         }), response.status_code
+
+@factura_bp.route('/ver-factura/<number>', methods=['GET'])
+def ver_factura(number):
+    token = get_token_session()
+    if not token:
+        return jsonify({"error": "Token de acceso no encontrado. Inicia sesión para obtener un token."}), 401
+
+    url = f"{END_POINT}/v1/bills/show/{number}"
+
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/json"
+    }
+
+    response = requests.get(url, headers=headers)
+
+    if response.status_code == 200:
+        print(response.json())
+        return jsonify(response.json()), 200
+    else:
+        return jsonify({
+            "error": "No se pudo obtener la factura",
+            "status_code": response.status_code,
+            "response": response.text
+        }), response.status_code
