@@ -27,10 +27,13 @@
 
     {% include 'factus/modal_cargar.html' %}
 
+    {% include 'factus/modal_view.html' %}
+
     <script>
         const urlGetFacturas = '{{ url_for("factura.get_facturas") }}';
         const urlFacturaDownloadPdf = '{{ url_for("factura.download_pdf", number="") }}';
         const urlFacturaDownloadXml = '{{ url_for("factura.download_xml", number="") }}';
+        const urlFacturaView = '{{ url_for("factura.ver_factura", number="") }}';
     </script>
 
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>

@@ -1,0 +1,137 @@
+.modalView {
+    display: none; /* Oculto inicialmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000; /* Fondo sólido */
+    z-index: 1000;
+    
+    /* Centramos el contenido usando Flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Aseguramos que el padding se incluya en el tamaño total */
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.modalView-content {
+    background: #111;
+    padding: 20px;
+    width: 60%;        /* Modal más chico */
+    max-width: 600px;  /* Límite máximo reducido */
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99, 0 0 80px #00ff99;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    
+    /* Efecto flotante */
+    animation: float 3s ease-in-out infinite;
+    
+    /* Aseguramos que se centre dentro del contenedor flex */
+    margin: auto;
+}
+
+/* Animación de flotación */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.modalView-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #00ff99;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.modalView-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #00ff99;
+    text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99;
+}
+
+.close-modalView {
+    font-size: 28px;
+    color: #00ff99;
+    cursor: pointer;
+    text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+    transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+}
+
+/* Efecto hover para el botón de cerrar */
+.close-modalView:hover {
+    color: #fff;
+    transform: scale(1.1);
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff;
+}
+
+/* Navegación de pestañas */
+.tabs {
+    display: flex;
+    margin-top: 20px;
+    border-bottom: 1px solid #00ff99;
+}
+
+.tab {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    color: #00ff99;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tab.active {
+    background: #00ff99;
+    color: #111;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px 0;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #00ff99;
+    padding-bottom: 5px;
+    text-align: center;
+    color: #00ff99;
+    text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99;
+}
+
+.section p {
+    margin: 5px 0;
+}
+
+.qr-image {
+    max-width: 200px;
+    margin-top: 10px;
+    display: block;
+}

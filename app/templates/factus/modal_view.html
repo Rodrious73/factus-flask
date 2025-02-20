@@ -1,0 +1,62 @@
+<div id="modalViewFactus" class="modalView">
+    <div class="modalView-content">
+        <div class="modalView-header">
+            <h2>Detalles de la Factura</h2>
+            <span class="close-modalView">&times;</span>
+        </div>
+        <!-- Navegación entre secciones -->
+        <div class="tabs">
+            <button class="tab active" data-tab="factura-tab">Factura</button>
+            <button class="tab" data-tab="empresa-tab">Empresa</button>
+            <button class="tab" data-tab="cliente-tab">Cliente</button>
+            <button class="tab" data-tab="items-tab">Items</button>
+            <button class="tab" data-tab="tributos-tab">Tributos</button>
+        </div>
+        <!-- Contenido de las pestañas -->
+        <div id="factura-tab" class="tab-content active">
+            <div class="section">
+                <h3>Datos de la Factura</h3>
+                <p><strong>Número:</strong> <span id="facturaNumber"></span></p>
+                <p><strong>Código de Referencia:</strong> <span id="facturaRef"></span></p>
+                <p><strong>Status:</strong> <span id="facturaStatus"></span></p>
+                <p><strong>Total:</strong> <span id="facturaTotal"></span></p>
+                <p><strong>Fecha de Creación:</strong> <span id="facturaFecha"></span></p>
+                <p><strong>DIEN:</strong> <a id="facturaQRLink"></a></p>
+                <p><strong>QR:</strong></p>
+                <img id="facturaQRImage" class="qr-image" src="" alt="QR Code">
+            </div>
+        </div>
+        <div id="empresa-tab" class="tab-content">
+            <div class="section">
+                <h3>Datos de la Empresa</h3>
+                <p><strong>Nombre:</strong> <span id="empresaNombre"></span></p>
+                <p><strong>NIT:</strong> <span id="empresaNit"></span></p>
+                <p><strong>Email:</strong> <span id="empresaEmail"></span></p>
+                <p><strong>Teléfono:</strong> <span id="empresaTelefono"></span></p>
+                <p><strong>Dirección:</strong> <span id="empresaDireccion"></span></p>
+            </div>
+        </div>
+        <div id="cliente-tab" class="tab-content">
+            <div class="section">
+                <h3>Datos del Cliente</h3>
+                <p><strong>Nombre:</strong> <span id="clienteNombre"></span></p>
+                <p><strong>Identificación:</strong> <span id="clienteId"></span></p>
+                <p><strong>Email:</strong> <span id="clienteEmail"></span></p>
+                <p><strong>Teléfono:</strong> <span id="clienteTelefono"></span></p>
+                <p><strong>Dirección:</strong> <span id="clienteDireccion"></span></p>
+            </div>
+        </div>
+        <div id="items-tab" class="tab-content">
+            <div class="section">
+                <h3>Productos</h3>
+                <div id="itemsContainer"></div>
+            </div>
+        </div>
+        <div id="tributos-tab" class="tab-content">
+            <div class="section">
+                <h3>Tributos</h3>
+                <div id="tributosContainer"></div>
+            </div>
+        </div>
+    </div>
+</div>
