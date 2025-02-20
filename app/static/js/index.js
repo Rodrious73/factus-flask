@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
       <td>${factura.status === 1 ? 'Validada' : 'Sin Validar'}</td>
       <td>${factura.created_at}</td>
       <td>
-        <button class="btn-neon btn-download-pdf" data-number="${factura.number}">
+        <button class="btn-neon-tabla btn-download-pdf" data-number="${factura.number}">
           <i class="bi bi-file-earmark-pdf"></i>
         </button>
-        <button class="btn-neon btn-download-xml" data-number="${factura.number}">
+        <button class="btn-neon-tabla btn-download-xml" data-number="${factura.number}">
           <i class="bi bi-filetype-xml"></i>
         </button>
       </td>

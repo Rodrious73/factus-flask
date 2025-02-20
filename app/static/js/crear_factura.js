@@ -19,6 +19,26 @@ customerIdentificationDocumentId.addEventListener('change', () => {
     }
 });
 
+document.getElementById('organization_type_id').addEventListener('change', function() {
+    const value = this.value;
+    const juridicaFields = document.querySelectorAll('.juridica');
+    const naturalFields = document.querySelectorAll('.natural');
+
+    if (value === '1') {
+        // Muestra campos para Persona Jurídica y oculta los de Persona Natural
+        juridicaFields.forEach(el => el.style.display = 'flex');
+        naturalFields.forEach(el => el.style.display = 'none');
+    } else if (value === '2') {
+        // Muestra campos para Persona Natural y oculta los de Persona Jurídica
+        naturalFields.forEach(el => el.style.display = 'flex');
+        juridicaFields.forEach(el => el.style.display = 'none');
+    } else {
+        // Ocultar ambos en caso de no haber selección
+        juridicaFields.forEach(el => el.style.display = 'none');
+        naturalFields.forEach(el => el.style.display = 'none');
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // Metodos de Pago
     fetch(urlMetodosPago)
@@ -246,9 +266,10 @@ document.getElementById("generarFactura").addEventListener("submit", function (e
         numbering_range_id: numbering_range_id,
         reference_code: reference_code,
         observation: observation,
-        payment_form: payment_form,
+        //payment_form: payment_form,
+        payment_form: payment_form === 1 ? '1' : '2',
         ...(payment_form === 2 && { payment_due_date: payment_due_date }),
-        payment_method_code: payment_method_code,
+        payment_method_code: payment_method_code.toString(),
         customer: {
             identification_document_id: customer_identification_document_id,
             identification: customer_identification,
@@ -265,6 +286,8 @@ document.getElementById("generarFactura").addEventListener("submit", function (e
         },
         items: items
     };
+
+    console.log(JSON.stringify(payload));
 
     fetch(urlGenerarFactura, {
         method: 'POST',
@@ -286,4 +309,5 @@ document.getElementById("generarFactura").addEventListener("submit", function (e
 
             console.error("Error al enviar la factura:", error);
         });
+
 });
