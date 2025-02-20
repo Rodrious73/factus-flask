@@ -177,7 +177,6 @@ def ver_factura(number):
     response = requests.get(url, headers=headers)
 
     if response.status_code == 200:
-        print(response.json())
         return jsonify(response.json()), 200
     else:
         return jsonify({
