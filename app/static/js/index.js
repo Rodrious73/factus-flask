@@ -24,7 +24,6 @@ tabs.forEach(tab => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    modal.style.display = "none";
     var loadingModal = new bootstrap.Modal(document.getElementById('loadingModal'));
     loadingModal.show();
 
